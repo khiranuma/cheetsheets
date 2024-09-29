@@ -20,11 +20,19 @@ gh workflow run xxxx.yml -f key=value
 gh workflow run xxxx.yml -r <branch name>
 ```
 
-## 実行された workflow を列挙する
+## workflow を列挙する
 
-```bash
-gh workflow list
-```
+- workflow のリストを取得する
+
+  ```bash
+  gh workflow list
+  ```
+
+- workflow の詳細を確認する(実行履歴含む)
+  - run_id を確認するのに有用
+  ```bash
+  gh workflow view
+  ```
 
 ## リポジトリに Secrets を設定する
 
