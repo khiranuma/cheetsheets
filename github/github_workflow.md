@@ -25,3 +25,16 @@ gh workflow run xxxx.yml -r <branch name>
 ```bash
 gh workflow list
 ```
+
+## リポジトリに Secrets を設定する
+
+- Secrets の設定
+
+  ```bash
+  gh secret set SECRET_NAME --body "SuperSecretValue"
+  ```
+
+- 登録されている Secrets のリストを取得する(値は取れない)
+  ```bash
+  gh secret list
+  ```

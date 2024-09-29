@@ -85,3 +85,42 @@ git branch
 ```bash
 git branch <new branch>
 ```
+
+# タグ操作
+
+- タグを作成してリモートに反映する
+
+```bash
+git switch main
+git pull
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+- ローカルのタグを削除する
+
+```bash
+git tag -d <tagname>
+```
+
+# リモート操作
+
+- リモートを確認する
+
+```bash
+git remote -v
+```
+
+- リモートリポジトリの URL を変更する
+
+```bash
+git remote set-url origin <new url>
+```
+
+- リポジトリ移行
+
+```bash
+git clone --mirror <from repo>
+cd <repo dir>
+git push --mirror <to repo>
+```
