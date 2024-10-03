@@ -124,3 +124,14 @@ git clone --mirror <from repo>
 cd <repo dir>
 git push --mirror <to repo>
 ```
+
+# Windows で作成したファイルの実行権限を変更する
+
+- 実行権限を追加する
+  ```bash
+  git update-index --add --chmod=+x <filename>
+  ```
+- 実行権限を取り除く
+  ```bash
+  git update-index --add --chmod=-x <filename>
+  ```
