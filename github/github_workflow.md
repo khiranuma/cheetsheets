@@ -34,6 +34,14 @@ gh workflow run xxxx.yml -r <branch name>
   gh workflow view
   ```
 
+## リポジトリに Variables を設定する
+
+- Variable の設定
+
+```bash
+gh variable set VAR_NAME --body "Value of Variable"
+```
+
 ## リポジトリに Secrets を設定する
 
 - Secrets の設定
