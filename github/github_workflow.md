@@ -54,3 +54,34 @@ gh variable set VAR_NAME --body "Value of Variable"
   ```bash
   gh secret list
   ```
+
+## OIDC subject クレームをカスタマイズする
+
+- OIDC の subject クレームをデフォルトから変更する
+
+```bash
+gh api /repos/<github account>/<repository name>/actions/oidc/customization/sub \
+--method PUT \
+-H "Accept: application/vnd.github+json" \
+-H "X-GitHub-Api-Version: 2022-11-28" \
+-f "include_claim_keys[]=repo" \
+-f "include_claim_keys[]=repo" \
+-f "include_claim_keys[]=repo" \
+-F "use_default=false"
+```
+
+- 生成される sub クレーム
+
+```
+repo:<github account>/<repository name>:actor:<github.actor>:<context>
+```
+
+- OIDC の subject クレームをデフォルトに戻す
+
+```bash
+gh api /repos/<github account>/<repository name>/actions/oidc/customization/sub \
+--method PUT \
+-H "Accept: application/vnd.github+json" \
+-H "X-GitHub-Api-Version: 2022-11-28" \
+-F "use_default=true"
+```
