@@ -44,9 +44,9 @@ docker network inspect {ネットワーク名}
 
 ```
         "Containers": {
-            "81f35c04c027a0ee8aa2c5d58d41710b718f3df4c080c93f66e7db4c44760eb4": {
+            "81f35c04c027a0.......": {
                 "Name": "my-cotainer",
-                "EndpointID": "7775e0bb3b44a081150a2a6ca80799c4faaaae257d55dd07b3c5cbb913259492",
+                "EndpointID": "7775e0bb3b44a081150......",
                 "MacAddress": "......",
                 "IPv4Address": "172.17.0.2/16",
                 "IPv6Address": ""
